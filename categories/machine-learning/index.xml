@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Machine Learning on Notes</title>
+    <link>https://uyenhoang.github.io/site/categories/machine-learning/index.xml</link>
+    <description>Recent content in Machine Learning on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://uyenhoang.github.io/site/categories/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Factorization machines introduction</title>
+      <link>https://uyenhoang.github.io/site/post/fm/</link>
+      <pubDate>Tue, 24 Jan 2017 15:28:54 -0500</pubDate>
+      
+      <guid>https://uyenhoang.github.io/site/post/fm/</guid>
+      <description>
+
+&lt;p&gt;Factorization machines (FM) are a generic model class that can mimic most factorization models just by feature engineering.&lt;/p&gt;
+
+&lt;p&gt;FMs combine feature engineering with factorization models(matrix factorization or tensor factorization) in estimating interactions between categorical variables.&lt;/p&gt;
+
+&lt;!-- Factorization machines (FMs) uses linear regression and matrix factorization to model sparse feature interactions but in linear time.
+ --&gt;
+
+&lt;h2 id=&#34;factorization-machines-math&#34;&gt;Factorization Machines Math&lt;/h2&gt;
+
+&lt;p&gt;$$\hat y := w_0 + \sum_{i= 1}^n w_i x_i + \sum_{i = 1}^n \sum_{j = i+1}^n \hat w_{i,j} x_i x_j$$&lt;/p&gt;
+
+&lt;p&gt;where $\hat w_{i,j}$ are the factorized interaction parameters between pairs&lt;/p&gt;
+
+&lt;p&gt;$$w_{i, j} = \langle \mathbf{v_i}, \mathbf{v_j}\rangle = \sum_{f = 1}^k v_{i,f} \cdot v_{j,f}$$&lt;/p&gt;
+
+&lt;p&gt;and the model parameters $\Theta$ that have to be estimated are:
+$$w_{0}, \mathbf{w} \in \mathbb{R}^n, \mathbf{V} \in \mathbb{R}^{n \times k}$$&lt;/p&gt;
+
+&lt;p&gt;Intepretation: $w_0$ is the global bias, $w_i$ models the interaction of the i-th variable to the target and $\hat w_{i, j}$ models the factorized interaction of a pair of variables with the target.&lt;/p&gt;
+
+&lt;p&gt;When we consider quadractic feature interactions, the complexity increases to $O(n^2)$ in the above formula. Now consider a very sparse set of features, the runtime blows up. In most cases, we instead model a very limited set of feature interactions to manage the complexity.&lt;/p&gt;
+
+&lt;h2 id=&#34;how-do-fms-solve-the-problem&#34;&gt;How do FMs solve the problem?&lt;/h2&gt;
+
+&lt;p&gt;In the recommendataion problem space, the sparsity problem has been dealt with a well-documented technique called (non-negative) matrix factorization&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://uyenhoang.github.io/site/images/factorization.png&#34; alt=&#34;Example image&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We factorize sparse user item matrix $( r )$ $\in \mathbb{R}^{U \times I}$ into a user matrix $(u)$ $\in \mathbb{R}^{U  \times K}$ and an item matrix $(i)$ $\in \mathbb{R}^{I \times K}$, where $K &amp;lt;&amp;lt; U$ and $K &amp;lt;&amp;lt; I$.&lt;/p&gt;
+
+&lt;p&gt;User $(u_i)$&amp;rsquo;s preference for item $i_j$ can be approximated by $u_i \cdot i_j$.&lt;/p&gt;
+
+&lt;p&gt;Factorization Machines takes inspiration from matrix factorization, and models the feature iteractions like using latent vectors of size $K$. As a result, every sparse feature $f_i$ has a corresponding latent vector $v_i$. And two feature&amp;rsquo;s interactions are modelled as $v_i \cdot v_j$.&lt;/p&gt;
+
+&lt;!-- 
+$$y = w_0 + \sum\_{i = 1}^n w\_i x\_i + \sum\_{i = 1}^n \sum\_{j = 1}^n \langle v\_i, v\_j \rangle$$ --&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
