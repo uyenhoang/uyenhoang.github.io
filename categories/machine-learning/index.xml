@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Machine Learning on Notes</title>
-    <link>https://uyenhoang.github.io/site/categories/machine-learning/index.xml</link>
+    <link>https://uyenhoang.github.io/categories/machine-learning/index.xml</link>
     <description>Recent content in Machine Learning on Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://uyenhoang.github.io/site/categories/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://uyenhoang.github.io/categories/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Factorization machines introduction</title>
-      <link>https://uyenhoang.github.io/site/post/fm/</link>
+      <link>https://uyenhoang.github.io/post/fm/</link>
       <pubDate>Tue, 24 Jan 2017 15:28:54 -0500</pubDate>
       
-      <guid>https://uyenhoang.github.io/site/post/fm/</guid>
+      <guid>https://uyenhoang.github.io/post/fm/</guid>
       <description>
 
 &lt;p&gt;Factorization machines (FM) are a generic model class that can mimic most factorization models just by feature engineering.&lt;/p&gt;
@@ -42,7 +42,7 @@ $$w_{0}, \mathbf{w} \in \mathbb{R}^n, \mathbf{V} \in \mathbb{R}^{n \times k}$$&l
 
 &lt;p&gt;In the recommendataion problem space, the sparsity problem has been dealt with a well-documented technique called (non-negative) matrix factorization&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://uyenhoang.github.io/site/images/factorization.png&#34; alt=&#34;Example image&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://uyenhoang.github.io/images/factorization.png&#34; alt=&#34;Example image&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;We factorize sparse user item matrix $( r )$ $\in \mathbb{R}^{U \times I}$ into a user matrix $(u)$ $\in \mathbb{R}^{U  \times K}$ and an item matrix $(i)$ $\in \mathbb{R}^{I \times K}$, where $K &amp;lt;&amp;lt; U$ and $K &amp;lt;&amp;lt; I$.&lt;/p&gt;
 

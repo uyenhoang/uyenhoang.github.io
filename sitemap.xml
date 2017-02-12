@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://uyenhoang.github.io/post/python_notes/</loc>
+    <loc>https://uyenhoang.github.io/post/python_module/</loc>
     <lastmod>2017-02-09T15:06:09-05:00</lastmod>
   </url>
   
@@ -21,8 +21,8 @@
   </url>
   
   <url>
-    <loc>https://uyenhoang.github.io/categories/misc/</loc>
-    <lastmod>2017-02-09T15:06:09-05:00</lastmod>
+    <loc>https://uyenhoang.github.io/categories/machine-learning/</loc>
+    <lastmod>2017-01-24T15:28:54-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -34,6 +34,12 @@
   
   <url>
     <loc>https://uyenhoang.github.io/post/</loc>
+    <lastmod>2017-02-09T15:06:09-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://uyenhoang.github.io/categories/python/</loc>
     <lastmod>2017-02-09T15:06:09-05:00</lastmod>
     <priority>0</priority>
   </url>
